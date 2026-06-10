@@ -10,8 +10,6 @@ on:
 
     paths:
       - 'Infrastructure/EC2/**'
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -23,7 +21,7 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     defaults:
       run:
-        working-directory: Infrastructure
+        working-directory: Infrastructure/EC2
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
