@@ -15,7 +15,7 @@ on:
   
 concurrency:
   group: "Terraform_S3_INSTANCE"  
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
